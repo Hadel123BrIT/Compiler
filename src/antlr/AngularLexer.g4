@@ -1,6 +1,7 @@
 //lexer grammar AngularLexer;
 
 lexer grammar AngularLexer;
+
 SEMI             : ';' ;
 DOT              : '.' ;
 ARRAY_START      : '[' ;
@@ -19,7 +20,7 @@ HTML_TAG_CLOSE   : '>' ;
 HTML_TAG_END     : '</' ;
 HTML_SELF_CLOSING: '/>' ;
 
-
+//Key words
 LET           : 'let' ;
 CONST         : 'const' ;
 FUNCTION      : 'function' ;
