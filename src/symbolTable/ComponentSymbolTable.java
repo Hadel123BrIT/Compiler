@@ -14,7 +14,10 @@ public class ComponentSymbolTable {
 
     public void checkComponentExists(String name, int line) {
         if (!components.containsKey(name)) {
-            throw new SemanticError("Undefined component: " + name, line);
+            throw SemanticError.builder()
+                    .withMessage("Undefined component: " + name)
+                    .atLocation(line, -1)
+                    .build();
         }
     }
 

@@ -15,14 +15,20 @@ public class FunctionsSymbolTable {
     public boolean checkIfExist(String functionName,int line){
         if(Function.keySet().contains(functionName))
             return true;
-        throw new SemanticError("Function "+functionName+"is not decleared",line);
+        throw SemanticError.builder()
+                .withMessage("Function " + functionName + " is not declared")
+                .atLocation(line, -1)
+                .build();
     }
 
     public boolean checknumofParameters(String functionName, int num, int line){
         if(Function.get(functionName).getParameters().size() == num ){
             return true;
         }
-        throw new SemanticError("Function "+functionName+"parameters count is not true",line);
+        throw SemanticError.builder()
+                .withMessage("Function " + functionName + " has incorrect number of parameters")
+                .atLocation(line, -1)
+                .build();
     }
 
 
