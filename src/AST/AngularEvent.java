@@ -1,6 +1,6 @@
 package AST;
 
-public class AngularEvent {
+public class AngularEvent extends ASTNode {
     String clickEvent;
     String equal;
     String stringLiteral;

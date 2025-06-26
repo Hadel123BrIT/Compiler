@@ -1,6 +1,6 @@
 package AST;
 
-public class TwoWayBinding {
+public class TwoWayBinding extends ASTNode {
     String equal;
     String stringLiteral;
     String towWayBinding;

@@ -1,6 +1,6 @@
 package AST;
 
-public class Assignment {
+public class Assignment extends ASTNode {
     String identifier;
     String dot;
     String equal;

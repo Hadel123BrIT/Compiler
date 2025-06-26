@@ -1,6 +1,6 @@
 package AST;
 
-public class ArrayElement {
+public class ArrayElement extends ASTNode{
     Object object;
     Value value;
 

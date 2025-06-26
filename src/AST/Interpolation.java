@@ -1,6 +1,6 @@
 package AST;
 
-public class Interpolation {
+public class Interpolation extends ASTNode {
     String  propertyBinding;
 
     public String getPropertyBinding() {

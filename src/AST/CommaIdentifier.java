@@ -1,6 +1,6 @@
 package AST;
 
-public class CommaIdentifier {
+public class CommaIdentifier extends ASTNode {
     String comma;
     String identifier;
 

@@ -1,6 +1,6 @@
 package AST;
 
-public class Template {
+public class Template extends ASTNode {
     String backtick;
     HtmlContent htmlContent;
 

@@ -1,6 +1,6 @@
 package AST;
 
-public class DotIdentifier {
+public class DotIdentifier extends ASTNode {
     String dot;
     String identifier;
 

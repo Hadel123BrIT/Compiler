@@ -3,7 +3,7 @@ package AST;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExpressionList {
+public class ExpressionList extends ASTNode {
     Expression expression;
     List<CommaExpression> commaExpressions = new ArrayList<CommaExpression>();
 

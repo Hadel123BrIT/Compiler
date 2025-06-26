@@ -1,6 +1,6 @@
 package AST;
 
-public class Property {
+public class Property extends ASTNode {
     String identifier;
     String stringLiteral;
     String colon;

@@ -1,6 +1,6 @@
 package AST;
 
-public class GenericElement {
+public class GenericElement extends ASTNode {
     String htmlTagOpen;
     String htmlTagClose;
     String htmlTagEnd;

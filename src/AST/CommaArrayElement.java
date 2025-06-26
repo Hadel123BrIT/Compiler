@@ -1,6 +1,6 @@
 package AST;
 
-public class CommaArrayElement {
+public class CommaArrayElement extends ASTNode{
 String comma;
 ArrayElement arrayElement;
 

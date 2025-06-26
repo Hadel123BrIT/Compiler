@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ParameterList {
+public class ParameterList extends ASTNode {
     String identifier;
     String colon;
     List<CommaParameterList> commaParameterLists = new ArrayList<CommaParameterList>();

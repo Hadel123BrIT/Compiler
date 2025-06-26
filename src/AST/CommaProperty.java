@@ -1,6 +1,6 @@
 package AST;
 
-public class CommaProperty {
+public class CommaProperty extends ASTNode {
     String comma;
     Property property;
 

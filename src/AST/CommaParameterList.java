@@ -1,6 +1,6 @@
 package AST;
 
-public class CommaParameterList {
+public class CommaParameterList extends ASTNode {
     String comma;
     ParameterList parameterList;
 

@@ -3,7 +3,7 @@ package AST;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PAttributes {
+public class PAttributes extends ASTNode {
     List<AngularBinding> angularBindings=new ArrayList<AngularBinding>();
     List<Interpolation> interpolations=new ArrayList<Interpolation>();
     List<StyleAttribute> styleAttributes=new ArrayList<StyleAttribute>();

@@ -1,6 +1,6 @@
 package AST;
 
-public class PropertyBinding {
+public class PropertyBinding extends ASTNode {
     String Binding;
     String equal;
     String stringLiteral;

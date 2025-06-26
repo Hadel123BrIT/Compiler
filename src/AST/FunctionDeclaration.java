@@ -1,6 +1,6 @@
 package AST;
 
-public class FunctionDeclaration {
+public class FunctionDeclaration extends ASTNode {
     String identifier;
     String lparen;
     String rparen;

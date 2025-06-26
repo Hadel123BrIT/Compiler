@@ -1,6 +1,6 @@
 package AST;
 
-public class H2Element {
+public class H2Element extends ASTNode {
     String htmlTagOpen;
     String htmlTagClose;
     String htmlTagEnd;

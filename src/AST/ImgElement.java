@@ -3,7 +3,7 @@ package AST;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImgElement {
+public class ImgElement extends ASTNode {
     String htmlTagOpen;
     String htmlTagClose;
     String identifier;

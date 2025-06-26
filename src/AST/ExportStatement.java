@@ -1,6 +1,6 @@
 package AST;
 
-public class ExportStatement {
+public class ExportStatement extends ASTNode {
     String export;
 VariableStatement variableStatement;
 FunctionDeclaration functionDeclaration;

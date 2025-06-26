@@ -1,6 +1,6 @@
 package AST;
 
-public class ComponentDefinition {
+public class ComponentDefinition extends ASTNode {
     Decorator decorator;
     Block block;
 
