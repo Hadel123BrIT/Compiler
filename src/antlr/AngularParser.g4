@@ -55,7 +55,12 @@ template
 
 
 htmlContent
-    : (htmlElement | interpolation | angularDirective | angularEvent | angularBinding)*
+    : htmlElement                  #HtmlElementContent
+    | interpolation                #InterpolationContent
+    | angularDirective             #DirectiveContent
+    | angularEvent                 #EventContent
+    | angularBinding               #BindingContent
+    |                              #EmptyContent
     ;
 
 

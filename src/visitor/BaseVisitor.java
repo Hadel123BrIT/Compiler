@@ -113,24 +113,24 @@ public class BaseVisitor extends AngularParserBaseVisitor {
         return visitAssignment(ctx.assignment());
     }
 //-------------------------------------------
-    @Override
-    public ComponentDefinition visitComponentDefinition(
-            AngularParser.ComponentDefinitionContext ctx) {
-        ComponentDefinition componentDefinition = new ComponentDefinition();
+@Override
+public ComponentDefinition visitComponentDefinition(AngularParser.ComponentDefinitionContext ctx) {
+    ComponentDefinition componentDefinition = new ComponentDefinition();
+    updateLineNumber(ctx);
 
-        updateLineNumber(ctx);
-
-        // Check for a following class declaration in the parent context
-
-        if (ctx.decorator() != null) {
-            componentDefinition.setDecorator(visitDecorator(ctx.decorator()));
-        }
-        if (ctx.block() != null) {
-            componentDefinition.setBlock((Block) visitBlock(ctx.block()));
-        }
-
-        return componentDefinition;
+    if (ctx.decorator() != null) {
+        componentDefinition.setDecorator(visitDecorator(ctx.decorator()));
     }
+    if (ctx.block() != null) {
+        componentDefinition.setBlock((Block) visitBlock(ctx.block()));
+    }
+
+    if (currentComponentName != null) {
+        componentRequirementsTable.getRequiredInputs().putIfAbsent(currentComponentName, new HashSet<>());
+    }
+
+    return componentDefinition;
+}
 //-----------------------------------------------
     @Override
     public Decorator visitDecorator(AngularParser.DecoratorContext ctx) {
@@ -164,7 +164,7 @@ public class BaseVisitor extends AngularParserBaseVisitor {
 
         return componentOptions;
     }
-
+//--------------------------------------------------------------------
     @Override
     public ComponentPropertyList visitComponentPropertyList(
             AngularParser.ComponentPropertyListContext ctx) {
@@ -185,7 +185,7 @@ public class BaseVisitor extends AngularParserBaseVisitor {
 
         return componentPropertyList;
     }
-
+//------------------------------------------------------------------------
     @Override
     public CommaComponentProperty visitCommaComponentProperty(AngularParser.CommaComponentPropertyContext ctx) {
         CommaComponentProperty commaComponentProperty = new CommaComponentProperty();
