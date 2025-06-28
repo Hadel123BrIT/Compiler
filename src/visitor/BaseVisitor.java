@@ -113,6 +113,8 @@ public class BaseVisitor extends AngularParserBaseVisitor {
         return visitAssignment(ctx.assignment());
     }
 //-------------------------------------------
+
+//------------------------------------------
 @Override
 public ComponentDefinition visitComponentDefinition(AngularParser.ComponentDefinitionContext ctx) {
     ComponentDefinition componentDefinition = new ComponentDefinition();
